@@ -91,7 +91,7 @@
           'conditions': [
             # Host build on linux depends on system.gyp::gtk as
             # default linux build has TOOLKIT_GTK defined.
-            ['host_os == "linux"', {
+            ['HOST_OS == "linux"', {
               'sources/': [
                 ['include', '^atomicops_internals_x86_gcc\\.cc$'],
               ],
@@ -102,7 +102,7 @@
                 '../build/linux/system.gyp:gtk',
               ],
             }],
-            ['host_os == "mac"', {
+            ['HOST_OS == "mac"', {
               'sources/': [
                 ['exclude', '^native_library_linux\\.cc$'],
                 ['exclude', '^process_util_linux\\.cc$'],
